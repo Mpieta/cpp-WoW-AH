@@ -45,7 +45,7 @@ void AuctionHouse::fetchData() {
     }
 
     this->isFetched = true;
-    std::cout<<std::endl<<"fetching done"<<std::endl;
+    //std::cout<<std::endl<<"fetching done"<<std::endl;
 
 }
 

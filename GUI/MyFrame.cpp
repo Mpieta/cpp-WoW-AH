@@ -127,7 +127,7 @@ void MyFrame::OnAddButtonClick(wxCommandEvent& event) {
 }
 
 void MyFrame::OnFetchData(wxCommandEvent& event) {
-    std::cout<<"fetching"<<std::endl;
+    //std::cout<<"fetching"<<std::endl;
     fetchButton->Disable();
     addButton->Disable();
     textBox->Clear();
@@ -171,19 +171,17 @@ void MyFrame::OnGridCellLeftClick(wxGridEvent& event) {
 
         bitmap->Refresh();
 
-        string1Label->SetLabel(i.getName() + "         ");
+        string1Label->SetLabel(i.getName());
         string1Text->SetLabel(i.getDesc());
     }
 
 }
 
 void MyFrame::downloadImage(std::string url) {
-    std::cout<<"downloading image..."<<std::endl;
     CURL* curl;
     FILE* fp;
     CURLcode res;
-    //std::string url = "https://example.com/image.jpg"; // Replace with your image URL
-    std::string file_path = "image.jpg";    // Specify the file path to save the image
+    std::string file_path = "image.jpg";
 
     curl = curl_easy_init();
     if (curl)
@@ -191,19 +189,15 @@ void MyFrame::downloadImage(std::string url) {
         fp = fopen(file_path.c_str(), "wb");
         if (fp)
         {
-            // Set the URL to download
             curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-            // Set the callback function to write the downloaded data to a file
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-            // Pass the file pointer to the callback function
             curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
 
-            // Perform the request
             res = curl_easy_perform(curl);
             if (res != CURLE_OK)
-                std::cout << "Error: " << curl_easy_strerror(res) << std::endl;
-
-            // Clean up
+            {
+                //std::cout << "Error: " << curl_easy_strerror(res) << std::endl;
+            }
             fclose(fp);
         }
         curl_easy_cleanup(curl);

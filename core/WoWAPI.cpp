@@ -9,10 +9,10 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* res
 }
 
 std::string WoWAPI::makeApiRequest(const std::string &url){
-    std::cout<<url<<std::endl;
+    //std::cout<<url<<std::endl;
     CURL* curl = curl_easy_init();
         if (curl) {
-            std::cout<<sentRequests<<"\n";
+            //std::cout<<sentRequests<<"\n";
             sentRequests++;
             std::string response;
 

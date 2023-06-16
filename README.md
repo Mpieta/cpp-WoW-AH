@@ -15,7 +15,7 @@ region's Auction House data needs to be fetched in one query,
 which may take a few seconds.
 
 Auctions in the app might differ slightly compared to auctions
-you can see in game dut to data in API being updated only once an hour
+you can see in game due to data in API being updated only once an hour
 
 ### Usage
 
@@ -31,6 +31,3 @@ The app uses following libraries:
 * cURL (8.1.2)
 * nlohmann_json (3.11.2)
 * wxWidgets (3.2.2.1#3)
-
-To build the app you can simply clone the repository and build using 
-existing CMakeLists.txt
