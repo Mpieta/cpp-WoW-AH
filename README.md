@@ -28,7 +28,13 @@ trying to send any request.
 To use the app first press "Fetch/Update Data" button, and then type the name
 (or part of the name) of an item you wish to look up.
 
-![](example.png)
+
+
+
+![results of "potion" query](example.png)
+<p align="center">
+<sup>results of "potion" query</sup>
+</p>
 
 ### Required libraries
 
