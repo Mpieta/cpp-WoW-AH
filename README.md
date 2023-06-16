@@ -25,6 +25,10 @@ trying to send any request.
 
 [Here](https://develop.battle.net/documentation/guides/getting-started) is how you can get your own API access token
 
+To use the app first press "Fetch/Update Data" button, and then type the name
+(or part of the name) of an item you wish to look up.
+
+![](example.png)
 
 ### Required libraries
 
