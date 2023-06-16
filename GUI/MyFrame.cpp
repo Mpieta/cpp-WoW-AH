@@ -71,7 +71,7 @@ MyFrame::MyFrame(const wxString& title, const std::string& token)
     grid->SetColSize(4,122);
 
 
-    wxStaticBoxSizer* horizontalBoxSizer = new wxStaticBoxSizer(wxHORIZONTAL, this, "Selected auction");
+    wxStaticBoxSizer* horizontalBoxSizer = new wxStaticBoxSizer(wxHORIZONTAL, this, "Selected auction item");
     sizer->Add(horizontalBoxSizer, 0, wxEXPAND | wxALL, 10);
 
     wxImage image(56, 56);
