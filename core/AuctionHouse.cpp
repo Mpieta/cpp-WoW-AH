@@ -1,7 +1,3 @@
-//
-// Created by Lenovo on 14/06/2023.
-//
-
 #include "AuctionHouse.h"
 
 AuctionHouse::AuctionHouse(const std::string& token) : api(token){}
@@ -45,7 +41,6 @@ void AuctionHouse::fetchData() {
     }
 
     this->isFetched = true;
-    //std::cout<<std::endl<<"fetching done"<<std::endl;
 
 }
 

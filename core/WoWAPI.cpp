@@ -9,10 +9,8 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* res
 }
 
 std::string WoWAPI::makeApiRequest(const std::string &url){
-    //std::cout<<url<<std::endl;
     CURL* curl = curl_easy_init();
         if (curl) {
-            //std::cout<<sentRequests<<"\n";
             sentRequests++;
             std::string response;
 
@@ -150,5 +148,4 @@ Item WoWAPI::getItemByID(int id) {
 
         return {id,name,desc,imageURL};
     }
-    //throw std::exception("Couldn't find given item id");
 }

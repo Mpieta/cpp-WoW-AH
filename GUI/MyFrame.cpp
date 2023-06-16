@@ -57,7 +57,7 @@ MyFrame::MyFrame(const wxString& title, const std::string& token)
     sizer->Add(topHorizontalBox);
 
     grid = new wxGrid(this, wxID_ANY);
-    grid->CreateGrid(0, 5); // Create a grid with 5 columns
+    grid->CreateGrid(0, 5);
     grid->SetColLabelValue(0, "Item ID");
     grid->SetColLabelValue(1, "Name");
     grid->SetColLabelValue(2, "Quantity");
@@ -92,7 +92,6 @@ MyFrame::MyFrame(const wxString& title, const std::string& token)
 }
 
 void MyFrame::OnAddButtonClick(wxCommandEvent& event) {
-    //grid->ForceRefresh();
     std::thread t([this]() {
         addButton->Disable();
 
@@ -127,7 +126,6 @@ void MyFrame::OnAddButtonClick(wxCommandEvent& event) {
 }
 
 void MyFrame::OnFetchData(wxCommandEvent& event) {
-    //std::cout<<"fetching"<<std::endl;
     fetchButton->Disable();
     addButton->Disable();
     textBox->Clear();

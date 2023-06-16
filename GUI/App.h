@@ -14,10 +14,7 @@ class App : public wxApp
 public:
     virtual bool OnInit() override;
 
-    //MyFrame& GetMainFrame() { return *mainFrame; }
-
 private:
-    //MyFrame *mainFrame = nullptr;
 };
 
 #endif // MYAPP_H
