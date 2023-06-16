@@ -23,7 +23,8 @@ The app requires a valid API token in **API_token.txt** text file,
 if valid token is not provided the app will most likely crash after
 trying to send any request.
 
-https://develop.battle.net/documentation/guides/getting-started
+[Here](https://develop.battle.net/documentation/guides/getting-started) is how you can get your own API access token
+
 
 ### Required libraries
 
